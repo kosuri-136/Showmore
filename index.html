@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Show More/Less Toggle</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <style>
+    .article-container {
+      position: relative;
+    }
+
+    .article-content {
+      margin-bottom: 10px;
+      max-height: 4.5em; /* 3 lines of text */
+      overflow: hidden;
+    }
+
+    .show-more-btn,
+    .show-less-btn {
+      position: relative;
+      bottom: 0px;
+      left: 0;
+    }
+
+    .show-less-btn {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Articles</h1>
+    <div class="article-container">
+      <div class="article-content">
+        <h3>Article 1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolorem, quaerat, temporibus cupiditate explicabo eos provident pariatur quisquam autem at magni maiores sit commodi asperiores ducimus blanditiis iure aspernatur deserunt!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam et sequi incidunt vitae dignissimos, esse possimus. Expedita repellat mollitia quisquam obcaecati praesentium. Aspernatur rem modi, soluta quaerat alias distinctio dolorum!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quod qui ipsum similique dolore fugiat, labore sunt, nemo maiores consectetur ut quibusdam saepe quaerat alias neque laboriosam corporis explicabo natus!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti hic saepe sapiente laudantium quisquam aperiam architecto excepturi reprehenderit animi cum, quos perspiciatis rerum totam non. Omnis accusamus dignissimos fugiat maxime!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ad aspernatur voluptatum minima nemo hic eos illo nostrum vitae adipisci sequi quibusdam, libero placeat aut, doloremque aliquid ex, obcaecati esse!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos sed dolor quod blanditiis doloribus veniam amet atque at doloremque quam aut provident tempore officiis vero totam, placeat a nostrum autem.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sequi deleniti odio sunt, eius tempore nobis labore magnam commodi? Officiis, dolorem vero. Distinctio debitis eveniet provident odit reiciendis omnis quia.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, in rem. Quo, dolores nemo totam ut molestias excepturi nesciunt quae quaerat natus, repellat dignissimos magnam minima velit eos saepe est!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, odit fugiat tempore veniam quia voluptatum iure recusandae repudiandae amet, voluptates magni non. Quisquam sit mollitia porro. A ratione aspernatur distinctio.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem odit veritatis nulla in natus omnis, minus, ab porro laudantium laborum voluptatum dolorem rerum? Ex dolore vel voluptates est libero harum.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum minus beatae expedita explicabo quis impedit ut quae corrupti doloribus ducimus aspernatur adipisci harum, velit reiciendis laborum tempora. Numquam, tempora corrupti?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ratione cumque ipsa accusantium, dolor quod blanditiis nobis! Quo placeat eius dolor sequi iusto. Earum vero consequatur modi, quae perspiciatis doloribus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum amet voluptatibus ad, sit atque laboriosam quaerat? Repellat asperiores, sequi cum earum dolorum odio exercitationem illo nam architecto nisi, quidem expedita.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem maxime unde a, et dolore distinctio consequuntur veniam molestiae, sapiente enim repellat voluptas! Soluta itaque commodi delectus mollitia voluptatem placeat saepe?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis voluptatem voluptatibus provident quis non temporibus iure facere assumenda eius aspernatur in mollitia, sunt necessitatibus iusto earum accusantium omnis commodi dolor.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, ad tempore numquam sapiente consequuntur alias voluptate, beatae ipsa cum voluptas hic maxime? Quaerat amet molestiae illum aliquid alias repellendus dignissimos?
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat enim sed arcu molestie, a rhoncus urna varius. Fusce dignissim pulvinar mi a aliquet. Nulla facilisi. Sed at fringilla est.</p>
+      </div>
+      <button class="btn btn-primary show-more-btn" onclick="showMore(this)">Show More</button>
+      <button class="btn btn-primary show-less-btn" onclick="showLess(this)">Show Less</button>
+    </div>
+    <div class="article-container">
+      <div class="article-content">
+        <h3>Article 2</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolorem, quaerat, temporibus cupiditate explicabo eos provident pariatur quisquam autem at magni maiores sit commodi asperiores ducimus blanditiis iure aspernatur deserunt!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam et sequi incidunt vitae dignissimos, esse possimus. Expedita repellat mollitia quisquam obcaecati praesentium. Aspernatur rem modi, soluta quaerat alias distinctio dolorum!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quod qui ipsum similique dolore fugiat, labore sunt, nemo maiores consectetur ut quibusdam saepe quaerat alias neque laboriosam corporis explicabo natus!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti hic saepe sapiente laudantium quisquam aperiam architecto excepturi reprehenderit animi cum, quos perspiciatis rerum totam non. Omnis accusamus dignissimos fugiat maxime!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ad aspernatur voluptatum minima nemo hic eos illo nostrum vitae adipisci sequi quibusdam, libero placeat aut, doloremque aliquid ex, obcaecati esse!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos sed dolor quod blanditiis doloribus veniam amet atque at doloremque quam aut provident tempore officiis vero totam, placeat a nostrum autem.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sequi deleniti odio sunt, eius tempore nobis labore magnam commodi? Officiis, dolorem vero. Distinctio debitis eveniet provident odit reiciendis omnis quia.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, in rem. Quo, dolores nemo totam ut molestias excepturi nesciunt quae quaerat natus, repellat dignissimos magnam minima velit eos saepe est!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, odit fugiat tempore veniam quia voluptatum iure recusandae repudiandae amet, voluptates magni non. Quisquam sit mollitia porro. A ratione aspernatur distinctio.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem odit veritatis nulla in natus omnis, minus, ab porro laudantium laborum voluptatum dolorem rerum? Ex dolore vel voluptates est libero harum.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum minus beatae expedita explicabo quis impedit ut quae corrupti doloribus ducimus aspernatur adipisci harum, velit reiciendis laborum tempora. Numquam, tempora corrupti?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ratione cumque ipsa accusantium, dolor quod blanditiis nobis! Quo placeat eius dolor sequi iusto. Earum vero consequatur modi, quae perspiciatis doloribus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum amet voluptatibus ad, sit atque laboriosam quaerat? Repellat asperiores, sequi cum earum dolorum odio exercitationem illo nam architecto nisi, quidem expedita.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem maxime unde a, et dolore distinctio consequuntur veniam molestiae, sapiente enim repellat voluptas! Soluta itaque commodi delectus mollitia voluptatem placeat saepe?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis voluptatem voluptatibus provident quis non temporibus iure facere assumenda eius aspernatur in mollitia, sunt necessitatibus iusto earum accusantium omnis commodi dolor.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, ad tempore numquam sapiente consequuntur alias voluptate, beatae ipsa cum voluptas hic maxime? Quaerat amet molestiae illum aliquid alias repellendus dignissimos?
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat enim sed arcu molestie, a rEtiam consequat lectus urna, nec molestie elit scelerisque vitae. Mauris vehicula nunc eu urna vestibulum, id aliquet nunc interdum. Aenean a ipsum a nisi fermentum efficitur.</p>
+      </div>
+      <button class="btn btn-primary show-more-btn" onclick="showMore(this)">Show More</button>
+      <button class="btn btn-primary show-less-btn" onclick="showLess(this)">Show Less</button>
+    </div>
+    <!-- Add more articles as needed -->
+  </div>
+
+  <script>
+    function showMore(button) {
+      const articleContainer = button.parentElement;
+      const articleContent = articleContainer.querySelector('.article-content');
+      const showLessBtn = articleContainer.querySelector('.show-less-btn');
+
+      articleContent.style.maxHeight = 'none';
+      button.style.display = 'none';
+      showLessBtn.style.display = 'block';
+    }
+
+    function showLess(button) {
+      const articleContainer = button.parentElement;
+      const articleContent = articleContainer.querySelector('.article-content');
+      const showMoreBtn = articleContainer.querySelector('.show-more-btn');
+
+      articleContent.style.maxHeight = '4.5em';
+      button.style.display = 'none';
+      showMoreBtn.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
